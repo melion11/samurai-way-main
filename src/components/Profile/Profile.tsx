@@ -1,17 +1,21 @@
 import React from 'react';
 import s from './Profile.module.css'
 import {MyPosts} from './MyPosts/MyPosts';
-import {Background} from './Background/Background';
-import {Avatar} from './Avatar/Avatar';
-import {Description} from './Description/Description';
+import {ProfileInfo} from './ProfileInfo/ProfileInfo';
+import {PostPropsType} from './MyPosts/Post/Post';
 
 export const Profile = () => {
+
+    const postsData: PostPropsType[]  = [
+        {id: 1,message:'Hi, how are you?', likesCount: 12},
+        {id: 2,message:"It's my first post", likesCount: 20}
+    ]
+
+
     return (
-        <div className={s.content}>
-            <Background/>
-            <Avatar/>
-            <Description/>
-            <MyPosts/>
+        <div className={s.profile__wrapper}>
+            <ProfileInfo/>
+            <MyPosts postsData={postsData}/>
         </div>
     )
 }

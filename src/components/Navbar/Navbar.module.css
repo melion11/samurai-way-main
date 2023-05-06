@@ -1,4 +1,17 @@
 .nav {
     grid-area: n;
     background-color: aqua;
+    padding: 20px;
+}
+
+.nav__link {
+    color: white;
+}
+
+.nav__link:hover {
+    color: gold;
+}
+
+.nav__link.activeLink {
+    color: gold;
 }

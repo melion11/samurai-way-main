@@ -3,16 +3,21 @@ import s from './Post.module.css'
 
 
 export type PostPropsType = {
-    message: string
-    likesCount: number
+    id: number;
+    message: string;
+    likesCount: number;
 }
 
-export const Post = (props: PostPropsType) => {
+export const Post: React.FC<PostPropsType> = ({
+                                                  id,
+                                                  message,
+                                                  likesCount
+                                              }) => {
     return (
-            <div className={s.post__wrap}>
-                <img className={s.post__image} src="" alt=""/>
-                <p className={s.post__text}>{props.message}</p>
-                <p><span>Likes: {props.likesCount}</span></p>
-            </div>
+        <li key={id} className={s.post__wrap}>
+            <img className={s.post__image} src="" alt=""/>
+            <p className={s.post__text}>{message}</p>
+            <p><span>Likes: {likesCount}</span></p>
+        </li>
     )
 }
