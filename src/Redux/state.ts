@@ -1,4 +1,4 @@
-type RootStateType = {
+export type RootStateType = {
     profilePage: ProfilePageType;
     dialogsPage: DialogsPageType;
 }

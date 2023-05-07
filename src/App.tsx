@@ -8,11 +8,14 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import {News} from './components/News/News';
 import {Music} from './components/Music/Music';
 import {Settings} from './components/Settings/Settings';
-import state from './Redux/state';
+import {RootStateType} from './Redux/state';
 
-const App = () => {
+export type AppPropsType = {
+    state: RootStateType;
+}
 
-    const [state, setState] = useState([])
+
+const App: React.FC<AppPropsType> = ({state}) => {
 
 
     return (
@@ -21,9 +24,10 @@ const App = () => {
                 <Header/>
                 <Navbar/>
                 <div className={'app__wrapper_content'}>
-                    <Route exact path={'/profile'} render={() => <Profile postsData={postsData}/>}/>
+                    <Route exact path={'/profile'} render={() => <Profile postsData={state.profilePage.postsData}/>}/>
                     <Route exact path={'/dialogs'}
-                           render={() => <Dialogs dialogsData={dialogsData} messagesData={messagesData}/>}/>
+                           render={() => <Dialogs dialogsData={state.dialogsPage.dialogsData}
+                                                  messagesData={state.dialogsPage.messagesData}/>}/>
                     <Route exact path={'/news'} render={() => <News/>}/>
                     <Route exact path={'/music'} render={() => <Music/>}/>
                     <Route exact path={'/settings'} render={() => <Settings/>}/>
