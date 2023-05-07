@@ -2,10 +2,10 @@ import React from 'react';
 import s from '../../Navbar/Navbar.module.css';
 import {NavLink} from 'react-router-dom';
 
-export type DialogItemTypeProps = {
-    name: string;
-    id: number;
-}
+// export type DialogItemTypeProps = {
+//     name: string;
+//     id: number;
+// }
 
 export const DialogItem: React.FC<DialogItemTypeProps> = (
     {

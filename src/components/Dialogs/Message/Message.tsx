@@ -1,10 +1,10 @@
 import React from 'react';
 import s from '../Dialogs.module.css';
 
-export type DialogMessageTypeProps = {
-    message: string;
-    id:number
-}
+// export type DialogMessageTypeProps = {
+//     message: string;
+//     id:number
+// }
 
 export const DialogMessage: React.FC<DialogMessageTypeProps> = (
     {

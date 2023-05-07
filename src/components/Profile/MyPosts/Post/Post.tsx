@@ -2,11 +2,11 @@ import React from 'react';
 import s from './Post.module.css'
 
 
-export type PostPropsType = {
-    id: number;
-    message: string;
-    likesCount: number;
-}
+// export type PostPropsType = {
+//     id: number;
+//     message: string;
+//     likesCount: number;
+// }
 
 export const Post: React.FC<PostPropsType> = ({
                                                   id,

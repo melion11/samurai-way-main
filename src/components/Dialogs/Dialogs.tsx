@@ -8,19 +8,11 @@ export type DialogsPropsType = {
     messagesData: DialogMessageTypeProps[];
 }
 
-export const Dialogs = () => {
+export const Dialogs: React.FC<DialogsPropsType> = ({
+                                                        dialogsData,
+                                                        messagesData
+                                                    }) => {
 
-    const dialogsData: DialogItemTypeProps[] = [
-        {id: 1, name: 'Pasha'},
-        {id: 2, name: 'Nastya'},
-        {id: 3, name: 'Sasha'}
-    ]
-
-    const messagesData: DialogMessageTypeProps[] = [
-        {id: 1, message: 'Hi'},
-        {id: 2, message: 'How are u?'},
-        {id: 3, message: 'Fine, thx'},
-    ]
 
     const dialogItem = dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
 
