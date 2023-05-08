@@ -2,23 +2,23 @@ export type RootStateType = {
     profilePage: ProfilePageType;
     dialogsPage: DialogsPageType;
 }
-type ProfilePageType = {
+export type ProfilePageType = {
     postsData: PostType[];
 
 }
-type DialogsPageType = {
+export type DialogsPageType = {
     dialogsData: DialogItemType[];
     messagesData: DialogMessageType[];
 }
-type DialogMessageType = {
+export type DialogMessageType = {
     message: string;
     id:number
 }
-type DialogItemType = {
+export type DialogItemType = {
     name: string;
     id: number;
 }
-type PostType = {
+export type PostType = {
     id: number;
     message: string;
     likesCount: number;

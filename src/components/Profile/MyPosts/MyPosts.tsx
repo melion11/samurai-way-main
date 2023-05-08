@@ -1,15 +1,16 @@
 import React from 'react';
 import s from './MyPosts.module.css'
 import {PostForm} from './PostForm/PostForm';
-import {Post, PostPropsType} from './Post/Post';
+import {Post} from './Post/Post';
 import {PostTitle} from './PostTitle/PostTitle';
+import {PostType} from '../../../Redux/state';
 
-export type MyPostsPropsType = {
-    postsData: PostPropsType[]
+export type MyPostsType = {
+    postsData: PostType[]
 }
 
 
-export const MyPosts: React.FC<MyPostsPropsType> = ({
+export const MyPosts: React.FC<MyPostsType> = ({
     postsData
                                                     }) => {
 

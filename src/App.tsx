@@ -25,9 +25,7 @@ const App: React.FC<AppPropsType> = ({state}) => {
                 <Navbar/>
                 <div className={'app__wrapper_content'}>
                     <Route exact path={'/profile'} render={() => <Profile postsData={state.profilePage.postsData}/>}/>
-                    <Route exact path={'/dialogs'}
-                           render={() => <Dialogs dialogsData={state.dialogsPage.dialogsData}
-                                                  messagesData={state.dialogsPage.messagesData}/>}/>
+                    <Route exact path={'/dialogs'} render={() => <Dialogs dialogsData={state.dialogsPage.dialogsData} messagesData={state.dialogsPage.messagesData}/>}/>
                     <Route exact path={'/news'} render={() => <News/>}/>
                     <Route exact path={'/music'} render={() => <Music/>}/>
                     <Route exact path={'/settings'} render={() => <Settings/>}/>

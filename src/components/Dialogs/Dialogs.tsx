@@ -1,14 +1,12 @@
 import React from 'react';
 import s from './Dialogs.module.css'
-import {DialogMessage, DialogMessageTypeProps} from './Message/Message';
-import {DialogItem, DialogItemTypeProps} from './Dialog/Dialog';
+import {DialogMessage} from './Message/Message';
+import {DialogItem} from './Dialog/Dialog';
+import {DialogsPageType} from '../../Redux/state';
 
-export type DialogsPropsType = {
-    dialogsData: DialogItemTypeProps[];
-    messagesData: DialogMessageTypeProps[];
-}
 
-export const Dialogs: React.FC<DialogsPropsType> = ({
+
+export const Dialogs: React.FC<DialogsPageType> = ({
                                                         dialogsData,
                                                         messagesData
                                                     }) => {
